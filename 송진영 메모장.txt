@@ -2,7 +2,7 @@ ProjectSmartFactoryCStudy
 2020. 07. 14 deagu dong-gu Starting smart factory C language.
 
 smartFactory2020 
-
+2020-08-03 내용 추가
 %d의 뜻은 데시멀
 decimal 이다 사전적 의미는 
 decimal 미국·영국 [ˈdesɪml] 발음듣기 영국식 발음듣기 중요도 별점 1개 예문보기
