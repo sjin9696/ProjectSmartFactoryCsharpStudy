@@ -1,0 +1,59 @@
+ProjectSmartFactoryCStudy 
+2020. 07. 14 deagu dong-gu Starting smart factory C language.
+
+smartFactory2020 
+2020-08-03 내용 추가
+%d의 뜻은 데시멀
+decimal 이다 사전적 의미는 
+decimal 미국·영국 [ˈdesɪml] 발음듣기 영국식 발음듣기 중요도 별점 1개 예문보기
+1. 십진법의   2. 소수
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/c
+# Edit at https://www.toptal.com/developers/gitignore?templates=c
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# End of https://www.toptal.com/developers/gitignore/api/c
