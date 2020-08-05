@@ -20,8 +20,8 @@ namespace ConsoleApp1
             //input_StringAlphabetCountPrint();   //소문자로만입력받은 문자열에서 글자가 몇번 나왔는지 표시
             //input_StringFirstAlphabetPrint();   //입력받은 문자열의 글자가 최초로 등장하는 위치를 표시
             //starPiramid_print();    //삼각형 모양 피라미드를 만드시오
-            input_numMaxMinPrint(); //5개의 숫자를 입력받은 뒤 가장 작은 수와 가장 큰 수를 표시
-
+            //input_numMaxMinPrint(); //5개의 숫자를 입력받은 뒤 가장 작은 수와 가장 큰 수를 표시
+            sequencePrint(); //개미수열의 20번째 표시
             return;
         }
         static void chineseZodiac()
@@ -258,5 +258,31 @@ namespace ConsoleApp1
             Console.ReadLine();
             return;
         }
+        static void sequencePrint()
+        {
+            /*아래의 규칙을 따르는 수열의 20번째 숫자를 프로그램을 만들어 찾으시오.
+            1, 11, 12, 1121, 122111, 112213
+            첫 번째 수열: 1
+            두 번째 수열: 1이 1개 = 11
+            세 번째 수열: 1이 2개 = 12
+            네 번째 수열 1이 1개, 2가 1개 = 1121
+            다섯 번째 수열: 1이 2개, 2가 1개, 1이 1개 = 122111
+            여섯 번째 수열: 1이 1개, 2가 2개 1이 3개 = 112213
+            */
+            int[] n = { 1 };
+            List<String> antSequence = new List<String>();
+            Console.WriteLine(n[0] + " " + n.Length);
+            antSequence.Add(n + " " + n.Length);
+            Console.WriteLine(antSequence.Count);
+
+            antSequence.Add(n + " " + n.Length);
+            Console.WriteLine(antSequence.Count);
+
+            antSequence.Add(n + " " + n.Length);
+            Console.WriteLine(antSequence.Count);
+            Console.ReadLine();
+            return;
+        }
+
     }
 }
