@@ -17,7 +17,8 @@ namespace ConsoleApp1
             //monthToSeasonPrint(DateTime.Now.Month); //현재 월이 무슨 계절인지 표시
             //sum_1_100_Except3_Print();  //1~100까지 3의 배수를 제외한 합을 표시
             //input_TotalSecondToSecMinPrint(); //사용자로 부터 양수인 전체 초를 입력받아 분:초로 표시
-            input_StringAlphabetCountPrint();   //소문자로만입력받은 문자열에서 글자가 몇번 나왔는지 표시
+            //input_StringAlphabetCountPrint();   //소문자로만입력받은 문자열에서 글자가 몇번 나왔는지 표시
+            input_StringFirstAlphabetPrint();   //입력받은 문자열의 글자가 최초로 등장하는 위치를 표시
             return;
         }
         static void chineseZodiac()
@@ -192,6 +193,27 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(item);
             }
+            Console.ReadLine();
+            return;
+        }
+        static void input_StringFirstAlphabetPrint()
+        {
+            //입력된 알파벳(단,소문자)에서 각각의 
+            //알파벳 글자가 최초로 등장하는 위치를 적으시오
+            Console.WriteLine("문자열을 입력받아 처음 등장한 알파벳의 수를 출력합니다. 소문자로만 입력");
+            String inputString = Console.ReadLine();
+            List<string> tempStringList = new List<string>();
+            //최초등장위치 처리
+            foreach (char item in inputString)
+            {
+                string sForm = item + "는 "+(inputString.IndexOf(item) + 1) + "번째에서 등장합니다.";
+                if (!tempStringList.Contains(sForm))
+                    tempStringList.Add(sForm);
+            }
+            //tempStringList 출력
+            foreach (string item in tempStringList)
+                Console.WriteLine(item);
+            
             Console.ReadLine();
             return;
         }
