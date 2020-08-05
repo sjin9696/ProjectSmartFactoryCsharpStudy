@@ -19,7 +19,9 @@ namespace ConsoleApp1
             //input_TotalSecondToSecMinPrint(); //사용자로 부터 양수인 전체 초를 입력받아 분:초로 표시
             //input_StringAlphabetCountPrint();   //소문자로만입력받은 문자열에서 글자가 몇번 나왔는지 표시
             //input_StringFirstAlphabetPrint();   //입력받은 문자열의 글자가 최초로 등장하는 위치를 표시
-            starPiramid_print();
+            //starPiramid_print();    //삼각형 모양 피라미드를 만드시오
+            input_numMaxMinPrint(); //5개의 숫자를 입력받은 뒤 가장 작은 수와 가장 큰 수를 표시
+
             return;
         }
         static void chineseZodiac()
@@ -231,6 +233,28 @@ namespace ConsoleApp1
                     Console.Write("*");
                Console.Write("\n");
             }
+            Console.ReadLine();
+            return;
+        }
+        static void input_numMaxMinPrint()
+        {
+            //5개의 숫자를 입력받은 뒤 가장 작은 수와 가장 큰 수를 출력하는 프로그램을 작성하시오.
+            Console.WriteLine("5개의 숫자를 입력받은 뒤 가장 작은 수와 가장 큰 수를 출력합니다.");
+            //입력 처리
+            int[] array = new int[5];
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write((i+1)+"번째 정수를 입력하세요:");
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            //가공-출력
+            Console.Write("입력한 값은 ");
+            foreach (int item in array)
+                Console.Write(item + " ,");
+            Console.WriteLine("입니다.");
+            //최대,최소 가공 처리 출력
+            Console.WriteLine("입력받은 가장 작은 수는 \""+array.Min()+"\"입니다.");
+            Console.WriteLine("입력받은 가장 큰 수는 \""+array.Max()+"\"입니다.");
             Console.ReadLine();
             return;
         }
