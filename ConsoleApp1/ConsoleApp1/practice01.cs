@@ -14,7 +14,8 @@ namespace ConsoleApp1
             //chineseZodiac();    //입력한 년도에서 띠를 표시
             //monthToSeasonPrint();   //입력한 월에 따른 계절 표시
             //todayChineseZodiacPrint();  //현재년도가 무슨띠 인지 표시
-            monthToSeasonPrint(DateTime.Now.Month); //현재 월이 무슨 계절인지 표시
+            //monthToSeasonPrint(DateTime.Now.Month); //현재 월이 무슨 계절인지 표시
+            sum_1_100_Except3_Print();  //1~100까지 3의 배수를 제외한 합을 표시
             return;
         }
         static void chineseZodiac()
@@ -129,6 +130,18 @@ namespace ConsoleApp1
             }
             Console.WriteLine("입력한 월은 " + month + "입니다");
             Console.WriteLine("입력한 월의 계절은 \"" + seasonArray[index] + "\"월 입니다");
+            Console.ReadLine();
+            return;
+        }
+        static void sum_1_100_Except3_Print()
+        {
+            //1~100까지 3의 배수를 제외한 합을 구하는 함수를 작성하세요.
+            int sum = 0;
+            for(int i=1;i<=100;i++)
+            {
+                sum = (i % 3 == 0) ? (sum += 0) : (sum += i);
+            }
+            Console.WriteLine("1~100까지 3의 배수를 제외한 합은 \"" + sum + "\" 입니다.");
             Console.ReadLine();
             return;
         }
