@@ -18,7 +18,8 @@ namespace ConsoleApp1
             //sum_1_100_Except3_Print();  //1~100까지 3의 배수를 제외한 합을 표시
             //input_TotalSecondToSecMinPrint(); //사용자로 부터 양수인 전체 초를 입력받아 분:초로 표시
             //input_StringAlphabetCountPrint();   //소문자로만입력받은 문자열에서 글자가 몇번 나왔는지 표시
-            input_StringFirstAlphabetPrint();   //입력받은 문자열의 글자가 최초로 등장하는 위치를 표시
+            //input_StringFirstAlphabetPrint();   //입력받은 문자열의 글자가 최초로 등장하는 위치를 표시
+            starPiramid_print();
             return;
         }
         static void chineseZodiac()
@@ -214,6 +215,22 @@ namespace ConsoleApp1
             foreach (string item in tempStringList)
                 Console.WriteLine(item);
             
+            Console.ReadLine();
+            return;
+        }
+        static void starPiramid_print()
+        {
+            Console.WriteLine("삼각형 모양 피라미드를 만듭니다. 크기를 입력하세요: ");
+            int size = int.Parse(Console.ReadLine());
+            //삼각형 모양 피라미드를 만드시오
+            for (int line = 0; line < size; line++)
+            {
+               for (int blank = size - line; blank > 0; blank--)
+                    Console.Write(" ");
+               for (int star = 0; star <= line * 2; star++)
+                    Console.Write("*");
+               Console.Write("\n");
+            }
             Console.ReadLine();
             return;
         }
