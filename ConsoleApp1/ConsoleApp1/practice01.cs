@@ -15,7 +15,8 @@ namespace ConsoleApp1
             //monthToSeasonPrint();   //입력한 월에 따른 계절 표시
             //todayChineseZodiacPrint();  //현재년도가 무슨띠 인지 표시
             //monthToSeasonPrint(DateTime.Now.Month); //현재 월이 무슨 계절인지 표시
-            sum_1_100_Except3_Print();  //1~100까지 3의 배수를 제외한 합을 표시
+            //sum_1_100_Except3_Print();  //1~100까지 3의 배수를 제외한 합을 표시
+            input_TotalSecondToSecMinPrint(); //사용자로 부터 양수인 전체 초를 입력받아 분:초로 표시
             return;
         }
         static void chineseZodiac()
@@ -142,6 +143,19 @@ namespace ConsoleApp1
                 sum = (i % 3 == 0) ? (sum += 0) : (sum += i);
             }
             Console.WriteLine("1~100까지 3의 배수를 제외한 합은 \"" + sum + "\" 입니다.");
+            Console.ReadLine();
+            return;
+        }
+        static void input_TotalSecondToSecMinPrint()
+        {
+            //임의의 양수인 전체 "초" 시간을 사용자로부터 입력 받아 이를 "분"과 "초"로 
+            //변환하는 프로그램을 작성하세요
+            Console.WriteLine("분:초로 보고 싶은 전체 초 값을 입력하세요.(양의정수)");
+            int inputTotalSecond = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("입력한 전체 초는 \"" + inputTotalSecond + "\"초 입니다.");
+            Console.WriteLine("처리한 n분:n초는 \"" + inputTotalSecond / 60 + "분:"+
+                inputTotalSecond % 60 + "초\" 입니다.");
             Console.ReadLine();
             return;
         }
