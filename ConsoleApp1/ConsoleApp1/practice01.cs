@@ -16,7 +16,8 @@ namespace ConsoleApp1
             //todayChineseZodiacPrint();  //현재년도가 무슨띠 인지 표시
             //monthToSeasonPrint(DateTime.Now.Month); //현재 월이 무슨 계절인지 표시
             //sum_1_100_Except3_Print();  //1~100까지 3의 배수를 제외한 합을 표시
-            input_TotalSecondToSecMinPrint(); //사용자로 부터 양수인 전체 초를 입력받아 분:초로 표시
+            //input_TotalSecondToSecMinPrint(); //사용자로 부터 양수인 전체 초를 입력받아 분:초로 표시
+            input_StringAlphabetCountPrint();   //소문자로만입력받은 문자열에서 글자가 몇번 나왔는지 표시
             return;
         }
         static void chineseZodiac()
@@ -156,6 +157,27 @@ namespace ConsoleApp1
             Console.WriteLine("입력한 전체 초는 \"" + inputTotalSecond + "\"초 입니다.");
             Console.WriteLine("처리한 n분:n초는 \"" + inputTotalSecond / 60 + "분:"+
                 inputTotalSecond % 60 + "초\" 입니다.");
+            Console.ReadLine();
+            return;
+        }
+        static void input_StringAlphabetCountPrint()
+        {
+            //입력된 알파벳 문자열(단 소문자로만 입력할 것)의 각 글자들이 
+            //해당 문자열에서 몇 번씩 나왔는지 출력하시오
+            Console.WriteLine("문자열을 입력받아 알파벳의 수를 출력합니다. 소문자로만 입력");
+            String inputString = Console.ReadLine();
+            //첫글자 를 뒤 문자열과 비교
+            //두번째 글자를 뒤 문자열과 비교 카운트 표시 값.
+            foreach(char item in inputString)
+            {
+                int count = 0;
+                foreach (char alpha in inputString)
+                {
+                    if (item == alpha)
+                        count++;
+                }
+                Console.WriteLine(item +":"+count+"회");
+            }
             Console.ReadLine();
             return;
         }
