@@ -165,11 +165,15 @@ namespace ConsoleApp1
             //입력된 알파벳 문자열(단 소문자로만 입력할 것)의 각 글자들이 
             //해당 문자열에서 몇 번씩 나왔는지 출력하시오
             Console.WriteLine("문자열을 입력받아 알파벳의 수를 출력합니다. 소문자로만 입력");
-            String inputString = Console.ReadLine();
+            String inputString2 = Console.ReadLine();
             List<string> tempStringList = new List<string>();
-            //선택정렬선진행
+            //정렬 처리
+            char[] cInput = inputString2.ToCharArray();
+            Array.Sort<char>(cInput);
+            string inputString = new string(cInput);
+
             //카운트 처리
-            foreach(char item in inputString)
+            foreach (char item in inputString)
             {
                 int count = 0;
                 foreach (char alpha in inputString)
@@ -177,9 +181,11 @@ namespace ConsoleApp1
                     if (item == alpha)
                         count++;
                 }
-               //문자열 체크 중복검사 처리
+                //문자열 체크 중복검사 처리
                 if (!tempStringList.Contains(item + ":" + count + "회"))
+                {
                     tempStringList.Add(item + ":" + count + "회");
+                }
             }
             //tempStringList 출력
             foreach (string item in tempStringList)
